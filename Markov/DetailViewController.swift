@@ -11,8 +11,10 @@ import UIKit
 class DetailViewController: UIViewController, UISplitViewControllerDelegate {
 
 	@IBOutlet var detailDescriptionLabel: UILabel
+	@IBOutlet var tableView: UITableView
 	var masterPopoverController: UIPopoverController? = nil
 
+	var textBag = TextBag(name: "")
 
 	var detailItem: AnyObject? {
 		didSet {
@@ -61,6 +63,86 @@ class DetailViewController: UIViewController, UISplitViewControllerDelegate {
 	func splitViewController(splitController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
 	    // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
 	    return true
+	}
+	
+	// #pragma mark - Segues
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if segue.identifier == "Edit Text" {
+			
+			let indexPath = self.tableView.indexPathForSelectedRow()
+			var snippet = textBag.bag[indexPath.row]
+			
+			//let viewController = segue.destinationViewController as EditTextViewController
+			var navigationController = segue.destinationViewController as UINavigationController
+			
+			var viewController = navigationController.topViewController as EditTextViewController
+
+			//((segue.destinationViewController as UINavigationController).topViewController as DetailViewController).textBag = bag
+			
+			
+			viewController.textSnippet = snippet
+			viewController.indexInBag = indexPath.row
+			
+		}
+		
+		if segue.identifier == "Scramble Text" {
+		
+			var navigationController = segue.destinationViewController as UINavigationController
+			
+			var viewController = navigationController.topViewController as ScrambledTextCollectionViewController
+			
+			viewController.scrambledArray = textBag.bag
+		}
+	}
+	
+	// #pragma mark - Table View
+	
+	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+		return 1
+	}
+	
+	 func tableView(tableView: UITableView!, heightForHeaderInSection section: Int) -> CGFloat {
+		
+		return 44
+	}
+	
+	 func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		
+		return textBag.bag.count
+	}
+	
+	 func tableView(tableView: UITableView!, estimatedheightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+				
+		return 44
+	}
+	
+	 func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as TextSnippetCell
+		cell.label.font = UIFont .preferredFontForTextStyle(UIFontTextStyleBody)
+		cell.label.text = textBag.bag[indexPath.row]
+		
+		cell.label.numberOfLines = 20
+		
+		return cell
+	}
+	
+	 func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+		// Return false if you do not want the specified item to be editable.
+		return true
+	}
+	
+	 func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+		if editingStyle == .Delete {
+			//textBag.bag.removeObjectAtIndex(indexPath.row)
+			tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+		} else if editingStyle == .Insert {
+			// Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+		}
+	}
+	
+	 func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		
 	}
 
 }

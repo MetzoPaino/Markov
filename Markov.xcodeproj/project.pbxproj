@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D5C2BA4195C15D500DF92C9 /* Scrambler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C2BA3195C15D500DF92C9 /* Scrambler.swift */; };
+		3D7DB2CB195B16CD00336F1E /* ComposeTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7DB2CA195B16CD00336F1E /* ComposeTextViewController.swift */; };
+		3D7DB2CD195B172C00336F1E /* EditTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7DB2CC195B172C00336F1E /* EditTextViewController.swift */; };
 		3D9B32C019509A6E0015E23C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9B32BF19509A6E0015E23C /* AppDelegate.swift */; };
 		3D9B32C219509A6E0015E23C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9B32C119509A6E0015E23C /* MasterViewController.swift */; };
 		3D9B32C419509A6E0015E23C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9B32C319509A6E0015E23C /* DetailViewController.swift */; };
 		3D9B32C719509A6E0015E23C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9B32C519509A6E0015E23C /* Main.storyboard */; };
 		3D9B32C919509A6E0015E23C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D9B32C819509A6E0015E23C /* Images.xcassets */; };
 		3D9B32D519509A6E0015E23C /* MarkovTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9B32D419509A6E0015E23C /* MarkovTests.swift */; };
+		3D9B32E319509C4F0015E23C /* TextSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9B32E219509C4F0015E23C /* TextSnippet.swift */; };
+		3D9B32E71950A0750015E23C /* TextSnippetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9B32E61950A0750015E23C /* TextSnippetCell.swift */; };
+		3DBF290B195B35FB002A5466 /* ScrambledTextCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF290A195B35FB002A5466 /* ScrambledTextCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D5C2BA3195C15D500DF92C9 /* Scrambler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scrambler.swift; sourceTree = "<group>"; };
+		3D7DB2CA195B16CD00336F1E /* ComposeTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTextViewController.swift; sourceTree = "<group>"; };
+		3D7DB2CC195B172C00336F1E /* EditTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTextViewController.swift; sourceTree = "<group>"; };
 		3D9B32BA19509A6E0015E23C /* Markov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Markov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D9B32BE19509A6E0015E23C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D9B32BF19509A6E0015E23C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +45,9 @@
 		3D9B32CE19509A6E0015E23C /* MarkovTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkovTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D9B32D319509A6E0015E23C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D9B32D419509A6E0015E23C /* MarkovTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkovTests.swift; sourceTree = "<group>"; };
+		3D9B32E219509C4F0015E23C /* TextSnippet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSnippet.swift; sourceTree = "<group>"; };
+		3D9B32E61950A0750015E23C /* TextSnippetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSnippetCell.swift; sourceTree = "<group>"; };
+		3DBF290A195B35FB002A5466 /* ScrambledTextCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrambledTextCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +92,13 @@
 				3D9B32BF19509A6E0015E23C /* AppDelegate.swift */,
 				3D9B32C119509A6E0015E23C /* MasterViewController.swift */,
 				3D9B32C319509A6E0015E23C /* DetailViewController.swift */,
+				3D7DB2CA195B16CD00336F1E /* ComposeTextViewController.swift */,
 				3D9B32C519509A6E0015E23C /* Main.storyboard */,
+				3DBF290A195B35FB002A5466 /* ScrambledTextCollectionViewController.swift */,
+				3D5C2BA3195C15D500DF92C9 /* Scrambler.swift */,
+				3D7DB2CC195B172C00336F1E /* EditTextViewController.swift */,
+				3D9B32E61950A0750015E23C /* TextSnippetCell.swift */,
+				3D9B32E219509C4F0015E23C /* TextSnippet.swift */,
 				3D9B32C819509A6E0015E23C /* Images.xcassets */,
 				3D9B32BD19509A6E0015E23C /* Supporting Files */,
 			);
@@ -211,9 +229,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D9B32E319509C4F0015E23C /* TextSnippet.swift in Sources */,
 				3D9B32C419509A6E0015E23C /* DetailViewController.swift in Sources */,
+				3D7DB2CB195B16CD00336F1E /* ComposeTextViewController.swift in Sources */,
+				3DBF290B195B35FB002A5466 /* ScrambledTextCollectionViewController.swift in Sources */,
 				3D9B32C219509A6E0015E23C /* MasterViewController.swift in Sources */,
+				3D9B32E71950A0750015E23C /* TextSnippetCell.swift in Sources */,
 				3D9B32C019509A6E0015E23C /* AppDelegate.swift in Sources */,
+				3D7DB2CD195B172C00336F1E /* EditTextViewController.swift in Sources */,
+				3D5C2BA4195C15D500DF92C9 /* Scrambler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +427,7 @@
 				3D9B32DA19509A6E0015E23C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D9B32DB19509A6E0015E23C /* Build configuration list for PBXNativeTarget "MarkovTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +436,7 @@
 				3D9B32DD19509A6E0015E23C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
